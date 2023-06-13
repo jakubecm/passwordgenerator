@@ -6,28 +6,33 @@ const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O",
 "+","=","{","[","}","]",",","|",":",";","<",">",".","?",
 "/"];
 
+let chosenLength = 15
 let firstPassword = document.getElementById("pass1")
 let secondPassword = document.getElementById("pass2")
+let slider = document.getElementById("pwdRange")
+let sliderVal = document.getElementById("passlen")
 
-firstPassword.disabled = true;
-secondPassword.disabled = true;
+firstPassword.disabled = true
+secondPassword.disabled = true
+sliderVal.textContent = chosenLength
+
+slider.addEventListener("input", (event) => {
+    sliderVal.textContent = event.target.value
+    chosenLength = slider.value
+  });
+  
 
 function selectRandomIndex(){
     return Math.floor(Math.random() * characters.length)
 }
 
-
-
 function generatePasswords(){
 
-    let generated1 = ""
-    let generated2 = ""
+    firstPassword.value = ''
+    secondPassword.value = ''
     
-    for(i = 0; i < 15; i++){
-        generated1 += characters[selectRandomIndex()]
-        generated2 += characters[selectRandomIndex()]
+    for(i = 0; i < chosenLength; i++){
+        firstPassword.value += characters[selectRandomIndex()]
+        secondPassword.value += characters[selectRandomIndex()]
     }
-
-    firstPassword.value = generated1
-    secondPassword.value = generated2
 }

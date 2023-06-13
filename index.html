@@ -17,11 +17,14 @@
             <br>
             <span id="headline-green">random password</span>
         </h1>
-
         <h4 id="subtext">Never use a weak password again</h4>
+        <hr>
+        <h3>Password length</h3>
+        <input type="range" min="8" max="30" value="15" class="slider" id="pwdRange">
+        <h4>Selected: <output id="passlen"></output></h4>
 
         <button class="generate-pwd" onclick="generatePasswords()">Generate passwords</button>
-        <hr id="line">
+        <hr>
 
         <input class="generated" id="pass1">
         <input class="generated" id="pass2">

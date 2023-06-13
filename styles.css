@@ -1,6 +1,7 @@
 body {
     background: #1C1C1C;
     font-family: 'Inter';
+    color: #4ADF86;
     margin: 0;
     display: flex;
     justify-content: space-evenly;
@@ -44,7 +45,12 @@ button{
     border-radius: 5px;
 }
 
-#line{
+button:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+hr {
     margin: 35px 0;
     border: 1px solid #2F3E53;
 }
@@ -59,4 +65,19 @@ button{
     color: #55F991;
     font-family: "Inter";
     text-align: center;
+}
+
+.slider{
+    display: block;
+    width: 47%;
+    border: none;
+    border-radius: 5px;
+}
+
+input{
+    cursor: pointer;
+}
+
+input:hover{
+    transform: scale(1.2);
 }
