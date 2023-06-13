@@ -56,4 +56,7 @@ button{
     background: #273549;
     border: none;
     border-radius: 6px;
+    color: #55F991;
+    font-family: "Inter";
+    text-align: center;
 }
